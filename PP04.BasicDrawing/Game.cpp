@@ -35,19 +35,20 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 void Game::render()
 {
 
-	m_destinationRectangle.x = m_sourceRectangle.x = 0;
-	m_destinationRectangle.y = m_sourceRectangle.y = 0;
-	m_destinationRectangle.w = m_sourceRectangle.w;
-	m_destinationRectangle.h = m_sourceRectangle.h;
+	m_destinationRectangle.x = m_sourceRectangle.x = 50; 
+	m_destinationRectangle.y = m_sourceRectangle.y = 50;
+
+	m_destinationRectangle.w = 200; m_sourceRectangle.w = 50; 
+	m_destinationRectangle.h = 200; m_sourceRectangle.h = 50;
 
 	SDL_RenderClear(m_pRenderer);
 
 	SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
 
 	SDL_RenderPresent(m_pRenderer);
-	//
+	
 
-	// SDL_RenderClear(m_pRenderer);
+	//SDL_RenderClear(m_pRenderer);
 	SDL_RenderPresent(m_pRenderer);
 }
 
