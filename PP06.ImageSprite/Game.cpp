@@ -24,11 +24,13 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface);
 
-//		m_pTexture = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface2);
+		m_pTexture2 = SDL_CreateTextureFromSurface(m_pRenderer, pTempSurface2);
 
 		SDL_FreeSurface(pTempSurface);
 
-//		SDL_FreeSurface(pTempSurface2);
+		SDL_FreeSurface(pTempSurface2);
+
+		SDL_QueryTexture(m_pTexture2, NULL, NULL, &m_sourceTree.w, &m_sourceTree.h);
 
 		SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
 
@@ -37,6 +39,9 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		m_sourceRectangle2.w = 128;
 		m_sourceRectangle2.h = 82;
+
+		m_sourceTree.w = 200;
+		m_sourceTree.h = 200;
 
 		m_destinationRectangle.x = m_sourceRectangle.x = 0;
 		m_destinationRectangle.y = m_sourceRectangle.y = 0;
@@ -47,6 +52,14 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		m_destinationRectangle2.y = 200;
 		m_destinationRectangle2.w = m_sourceRectangle.w;
 		m_destinationRectangle2.h = m_sourceRectangle.h;
+
+
+		m_sourceTree.x = 0;
+		m_sourceTree.y = 0;
+		m_destinationTree.x = 150;
+		m_destinationTree.y = 150;
+		m_destinationTree.w = m_sourceTree.w;
+		m_destinationTree.h = m_sourceTree.h;
 
 	}
 
@@ -63,7 +76,10 @@ void Game::render()
 
 	SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
 
+
 	SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle2, &m_destinationRectangle2);
+
+	//SDL_RenderCopy(m_pRenderer, m_pTexture2, &m_sourceTree, &m_destinationTree);
 
 	SDL_RenderPresent(m_pRenderer);
 }
