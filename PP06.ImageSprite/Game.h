@@ -12,7 +12,10 @@ private:
 	bool m_bRunning;
 	SDL_Texture* m_pTexture;
 	SDL_Rect m_sourceRectangle;
+	SDL_Rect m_sourceRectangle2;
 	SDL_Rect m_destinationRectangle;
+	SDL_Rect m_destinationRectangle2;
+
 
 public:
 	Game() {}
