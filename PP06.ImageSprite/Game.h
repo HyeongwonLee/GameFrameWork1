@@ -23,7 +23,7 @@ private:
 public:
 	Game() {}
 	~Game() {}
-	bool init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen);
+	bool init(const char* title, float xpos, float ypos, float width, float height, bool fullscreen);
 
 	void render();
 	void update() ;

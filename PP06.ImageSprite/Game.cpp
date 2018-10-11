@@ -1,7 +1,7 @@
 #include "Game.h"
 #include <SDL_image.h>
 
-bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
+bool Game::init(const char* title, float xpos, float ypos, float width, float height, bool fullscreen)
 {
 
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
@@ -34,30 +34,30 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		SDL_QueryTexture(m_pTexture, NULL, NULL, &m_sourceRectangle.w, &m_sourceRectangle.h);
 
-		m_sourceRectangle.w = 128;
-		m_sourceRectangle.h = 82;
+		m_sourceRectangle.w = 128.f;
+		m_sourceRectangle.h = 82.f;
 
-		m_sourceRectangle2.w = 128;
-		m_sourceRectangle2.h = 82;
+		m_sourceRectangle2.w = 128.f;
+		m_sourceRectangle2.h = 82.f;
 
-		m_sourceTree.w = 200;
-		m_sourceTree.h = 200;
+		m_sourceTree.w = 200.f;
+		m_sourceTree.h = 200.f;
 
-		m_destinationRectangle.x = m_sourceRectangle.x = 0;
-		m_destinationRectangle.y = m_sourceRectangle.y = 0;
+		m_destinationRectangle.x = m_sourceRectangle.x = 0.f;
+		m_destinationRectangle.y = m_sourceRectangle.y = 0.f;
 		m_destinationRectangle.w = m_sourceRectangle.w;
 		m_destinationRectangle.h = m_sourceRectangle.h;
 
-		m_destinationRectangle2.x = 200;
-		m_destinationRectangle2.y = 200;
+		m_destinationRectangle2.x = 200.f;
+		m_destinationRectangle2.y = 200.f;
 		m_destinationRectangle2.w = m_sourceRectangle.w;
 		m_destinationRectangle2.h = m_sourceRectangle.h;
 
 
-		m_sourceTree.x = 0;
-		m_sourceTree.y = 0;
-		m_destinationTree.x = 150;
-		m_destinationTree.y = 150;
+		m_sourceTree.x = 0.f;
+		m_sourceTree.y = 0.f;
+		m_destinationTree.x = 150.f;
+		m_destinationTree.y = 150.f;
 		m_destinationTree.w = m_sourceTree.w;
 		m_destinationTree.h = m_sourceTree.h;
 
@@ -112,4 +112,8 @@ void Game::update()
 	m_sourceRectangle.x = 128 * int(((SDL_GetTicks() / 100) % 6));
 
 	m_sourceRectangle2.x = 128 * int(((SDL_GetTicks() / 50) % 6));
+
+	m_destinationRectangle.x += 1;
+
+	SDL_Delay(10);
 }
