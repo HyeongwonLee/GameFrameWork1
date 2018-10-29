@@ -16,6 +16,9 @@ private:
 	int m_currentFrame;
 	//TextureManager m_textureManager;
 
+	int xpos;
+	int ypos;
+
 public:
 	Game() {}
 	~Game() {}

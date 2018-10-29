@@ -1,16 +1,18 @@
 #pragma once
+#include <SDL.h>
 #include <iostream>
-using namespace std;
 
+class Game;
 class GameObject
 {
 public:
-	void load(int x, int y, int width, int height, string textureID);
+	void load(int x, int y, int width, int height,
+		std::string textureID);
 	void draw(SDL_Renderer* pRenderer);
 	void update();
 	void clean();
 protected:
-	string m_textureID;
+	std::string m_textureID;
 	int m_currentFrame;
 	int m_currentRow;
 	int m_x;

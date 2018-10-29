@@ -1,20 +1,21 @@
 #pragma once
 #include <iostream>
-#include "TextureManager.h"
-#include "Player.h"
+#include <SDL.h>
 #include "GameObject.h"
+#include "Player.h"
 
-class Game
+class Game 
 {
 private:
 	SDL_Window * m_pWindow;
 	SDL_Renderer* m_pRenderer;
-	bool m_bRunning;
-
-	int m_currentFrame;
-
 	GameObject m_go;
 	Player m_player;
+	bool m_bRunning;
+	int m_currentFrame;
+
+	int xpos;
+	int ypos;
 
 public:
 	Game() {}

@@ -23,7 +23,8 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 		{
 			return false;
 		}
-
+		xpos = 0;
+		ypos = 0;
 
 //		SDL_SetRenderDrawColor(m_pRenderer, 255, 0, 0, 255);
 
@@ -64,11 +65,9 @@ void Game::render()
 
 //	m_textureManager.drawFrame("animate", 100, 100, 128, 82, 1, m_currentFrame, m_pRenderer);
 
-	TheTextureManager::Instance()->draw("animate", 0, 0, 128, 82,
-		m_pRenderer);
+	TheTextureManager::Instance()->drawFrame("animate", xpos, ypos, 128, 82,1,m_currentFrame, m_pRenderer);
 
-	TheTextureManager::Instance()->drawFrame("animate", 100, 100,
-		128, 82, 1, m_currentFrame, m_pRenderer);
+	TheTextureManager::Instance()->drawFrame("animate", 100, 100,128, 82, 1, m_currentFrame, m_pRenderer);
 
 
 	SDL_RenderPresent(m_pRenderer);
@@ -94,13 +93,34 @@ void Game::handleEvent()
 {
 	SDL_Event event;
 	if (SDL_PollEvent(&event)) {
-		switch (event.type)
-		{
-		case SDL_QUIT:
-			m_bRunning = false;
-			break;
-		default:
-			break;
+		if (event.type == SDL_KEYDOWN) {
+			switch (event.key.keysym.sym)
+			{
+			case SDLK_UP:
+				puts("UP");
+				ypos -= 5;
+				break;
+			case SDLK_DOWN:
+				puts("DOWN");
+				ypos += 5;
+				break;
+			case SDLK_LEFT:
+				puts("LEFT");
+				xpos-= 5;
+				break;
+			case SDLK_RIGHT:
+				puts("RIGHT");
+				xpos+= 5;
+				break;
+			case SDLK_ESCAPE:
+				m_bRunning = false;
+				break;
+			case SDL_QUIT:
+				m_bRunning = false;
+				break;
+			default:
+				break;
+			}
 		}
 	}
 }
