@@ -1,5 +1,4 @@
 #include "Game.h"
-#include <SDL_image.h>
 
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
@@ -16,12 +15,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 
 		m_bRunning = true;
 
-
-		//if (!TheTextureManager::Instance()->load("assets/animate-alpha.png",
-		//	"animate", m_pRenderer))
-		//{
-		//	return false;
-		//}
+		if (!TheTextureManager::Instance()->load("assets/animate-alpha.png",
+			"animate", m_pRenderer))
+		{
+			return false;
+		}
 
 		m_go.load(100, 100, 128, 82, "animate");
 		m_player.load(300, 300, 128, 82, "animate");
