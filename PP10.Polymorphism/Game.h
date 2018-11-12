@@ -16,8 +16,8 @@ private:
 	bool m_bRunning;
 	int m_currentFrame;
 
-	int xpos;
-	int ypos;
+	//int xpos;
+	//int ypos;
 
 	GameObject* m_go;
 	GameObject* m_player;
