@@ -3,6 +3,7 @@
 
 InputHandler::InputHandler()
 {
+	m_mousePosition = new Vector2D(0, 0);
 	for (int i = 0; i < 3; i++)
 	{
 		m_mouseButtonStates.push_back(false);
@@ -78,6 +79,8 @@ void InputHandler::onKeyUp()
 {
 	m_keystates = SDL_GetKeyboardState(0);
 }
+
+
 void InputHandler::onMouseButtonDown(SDL_Event event)
 {
 	if (event.button.button == SDL_BUTTON_LEFT)
