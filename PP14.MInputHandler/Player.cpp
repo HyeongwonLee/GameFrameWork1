@@ -1,4 +1,7 @@
 #include "Player.h"
+#include "Vector2D.h"
+#include "Bullet.h"
+
 
 Player::Player(const LoaderParams* pParams) : SDLGameObject(pParams)
 {
@@ -36,6 +39,10 @@ void Player::handleInput()
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
 	{
 		m_velocity.setY(2);
+	}
+	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_SPACE))
+	{
+		
 	}
 
 }

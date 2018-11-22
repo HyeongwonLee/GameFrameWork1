@@ -22,6 +22,7 @@ void SDLGameObject::draw()
 		TheGame::Instance()->GetRenderer());
 }
 
+
 void SDLGameObject::update()
 {
 	m_velocity += m_acceleration;
