@@ -5,9 +5,9 @@
 class Bullet : public SDLGameObject
 {
 private:
-	bool CANSHOT = false;
+
 public:
-	bool shot();
+
 	Bullet(const LoaderParams* pParams);
 	virtual void draw();
 	virtual void update();

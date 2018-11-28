@@ -1,8 +1,13 @@
 #include "Bullet.h"
+#include "Player.h"
+#include "TextureManager.h"
+
 
 Bullet ::Bullet(const LoaderParams* pParams) : SDLGameObject(pParams)
 {
+	draw();
 }
+
 void Bullet::draw()
 {
 	SDLGameObject::draw(); // we now use SDLGameObject

@@ -1,5 +1,5 @@
 #include "Player.h"
-#include "Vector2D.h"
+//#include "Vector2D.h"
 #include "Bullet.h"
 
 
@@ -42,7 +42,8 @@ void Player::handleInput()
 	}
 	if (TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_SPACE))
 	{
-		
+	  new Bullet(new LoaderParams(m_position.getX(), m_position.getY(), 128, 82, "Bullet"));
+
 	}
 
 }
