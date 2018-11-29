@@ -2,15 +2,13 @@
 #include "SDLGameObject.h"
 #include "InputHandler.h"
 
-class Bullet : public SDLGameObject
+class Player : public SDLGameObject
 {
 private:
-
+	void handleInput();
 public:
-
-	Bullet(const LoaderParams* pParams);
+	Player(const LoaderParams* pParams);
 	virtual void draw();
 	virtual void update();
 	virtual void clean();
-	void render();
 };
