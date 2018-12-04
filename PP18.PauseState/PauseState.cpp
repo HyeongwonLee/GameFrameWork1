@@ -68,10 +68,13 @@ bool PauseState::onExit()
 	m_gameObjects.clear();
 	TheTextureManager::Instance()
 		->clearFromTextureMap("resumebutton");
+
 	TheTextureManager::Instance()
 		->clearFromTextureMap("mainbutton");
+
 	// reset the mouse button states to false
 	TheInputHandler::Instance()->Reset();
+
 	std::cout << "exiting PauseState\n";
 	return true;
 }

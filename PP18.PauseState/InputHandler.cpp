@@ -123,6 +123,6 @@ void InputHandler::onMouseMove(SDL_Event event)
 }
 void InputHandler::Reset()
 {
-
+	getMouseButtonState(false);
 }
 InputHandler* InputHandler::s_pInstance = 0;
