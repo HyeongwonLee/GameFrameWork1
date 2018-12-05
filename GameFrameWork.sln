@@ -39,6 +39,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP17.PlayState", "PP17.Play
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP18.PauseState", "PP18.PauseState\PP18.PauseState.vcxproj", "{313E651F-721F-456E-B2FB-7135FDD166B4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PP19.GameOverState", "PP19.GameOverState\PP19.GameOverState.vcxproj", "{A3019CB4-C314-420C-93BD-DE2343AAB42E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -191,6 +193,14 @@ Global
 		{313E651F-721F-456E-B2FB-7135FDD166B4}.Release|x64.Build.0 = Release|x64
 		{313E651F-721F-456E-B2FB-7135FDD166B4}.Release|x86.ActiveCfg = Release|Win32
 		{313E651F-721F-456E-B2FB-7135FDD166B4}.Release|x86.Build.0 = Release|Win32
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Debug|x64.ActiveCfg = Debug|x64
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Debug|x64.Build.0 = Debug|x64
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Debug|x86.ActiveCfg = Debug|Win32
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Debug|x86.Build.0 = Debug|Win32
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Release|x64.ActiveCfg = Release|x64
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Release|x64.Build.0 = Release|x64
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Release|x86.ActiveCfg = Release|Win32
+		{A3019CB4-C314-420C-93BD-DE2343AAB42E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
