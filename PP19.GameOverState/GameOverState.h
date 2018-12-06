@@ -11,6 +11,7 @@ public:
 	virtual bool onEnter();
 	virtual bool onExit();
 	virtual std::string getStateID() const { return s_gameOverID; }
+	GameOverState();
 private:
 	static void s_gameOverToMain();
 	static void s_restartPlay();

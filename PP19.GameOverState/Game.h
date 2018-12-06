@@ -18,8 +18,6 @@ private:
 
 	static Game* s_pInstance;
 
-
-
 	GameStateMachine* m_pGameStateMachine;
 
 public:

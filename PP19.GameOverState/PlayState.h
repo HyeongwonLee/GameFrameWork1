@@ -1,5 +1,7 @@
 #pragma once
 #include "GameState.h"
+#include "SDLGameObject.h"
+#include "Vector2D.h"
 
 class GameObject;
 class PlayState : public GameState
@@ -21,6 +23,8 @@ public:
 		return s_pInstance;
 	}
 	PlayState() {}
+
+	bool checkCollision(SDLGameObject* p1, SDLGameObject* p2);
 private:
 
 	~PlayState() {};
